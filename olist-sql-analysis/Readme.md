@@ -1,4 +1,4 @@
-Project ini merupakan studi analitik yang saya buat dan berfokus pada implementasi SQL untuk menggali insight dari dataset Brazilian e-commerce Olist. Seluruh analisis saya dikembangkan menggunakan MySQL sebagai bagian dari portofolio saya untuk menunjukkan kompetensi teknis serta pola pikir analitis yang dibutuhkan dalam peran Data Analyst.
+Project ini merupakan studi analitik yang saya buat dan berfokus pada implementasi SQL untuk menggali insight dari dataset Brazilian e-commerce Olist. Seluruh analisis dikembangkan menggunakan MySQL sebagai bagian dari portofolio saya untuk menunjukkan kompetensi teknis serta pola pikir analitis yang dibutuhkan dalam peran Data Analyst.
 Dataset Olist ini dipilih karena memiliki struktur relasional yang kompleks, meliputi transaksi, pelanggan, produk, penjual, pembayaran, ulasan, dan detail pengiriman. Kompleksitas ini memberikan ruang yang luas untuk menyusun pertanyaan bisnis yang realistis serta simulasi analisis data end-to-end yang sering ditemui pada industri e-commerce.
 
 ->  Project ini dibuat sebagai sarana untuk menunjukkan kemampuan saya dalam:
