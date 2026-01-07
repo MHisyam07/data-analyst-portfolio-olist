@@ -36,5 +36,6 @@ ROUND(
 , 2) as late_delivery_rate
 
 Hasil Analisis:
-<img width="1316" height="944" alt="image" src="https://github.com/user-attachments/assets/71ce1ef3-b360-42f2-a619-9f38b5ebfa32" />
+<img width="1321" height="329" alt="image" src="https://github.com/user-attachments/assets/685c503d-b594-4fa6-b789-ea752ce7bdd7" />
+
 
