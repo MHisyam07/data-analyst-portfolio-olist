@@ -1,29 +1,36 @@
-Project ini merupakan studi analitik yang saya buat dan berfokus pada implementasi SQL untuk menggali insight dari dataset Brazilian e-commerce Olist. Seluruh analisis dikembangkan menggunakan MySQL sebagai bagian dari portofolio saya untuk menunjukkan kompetensi teknis serta pola pikir analitis yang dibutuhkan dalam peran Data Analyst.
-Dataset Olist ini dipilih karena memiliki struktur relasional yang kompleks, meliputi transaksi, pelanggan, produk, penjual, pembayaran, ulasan, dan detail pengiriman. Kompleksitas ini memberikan ruang yang luas untuk menyusun pertanyaan bisnis yang realistis serta simulasi analisis data end-to-end yang sering ditemui pada industri e-commerce.
+# 🇧🇷 Olist E-Commerce Analysis: Supply Chain & Revenue Optimization
 
-->  Project ini dibuat sebagai sarana untuk menunjukkan kemampuan saya dalam:
--  Merumuskan pertanyaan bisnis (business questions) yang relevan dan berdampak pada operasional perusahaan.
--  Menyusun query SQL yang optimal, sistematis, dan dapat direproduksi.
--  Memahami hubungan antartabel dalam database relasional dan bagaimana kaitannya terhadap proses bisnis.
--  Mengolah data transaksional menjadi insight yang bermakna.
--  Menggunakan teknik SQL dasar hingga tingkat lanjutan (CTE, Window Functions, Ranking, Time-series Aggregation, Cohort         Analysis).
--  Menganalisis performa bisnis, perilaku pelanggan, efisiensi logistik, serta performa penjual.
-   sehingga, portofolio ini tidak hanya menampilkan kemampuan teknis, tetapi juga pendekatan analitis dan pemahaman terhadap     konteks bisnis.
+<img width="1800" height="378" alt="dataset-cover" src="https://github.com/user-attachments/assets/9eb9e6f6-2d03-4680-ad89-84dccfc4352c" />
 
-->  Cakupan Analisis
-Analisis dalam proyek ini mencakup beberapa area penting dalam bisnis e-commerce, di antaranya:
 
-1. Customer Analytics
-Mengevaluasi persebaran pelanggan, perilaku pembelian, nilai transaksi, serta retensi pelanggan menggunakan pendekatan cohort. Analisis ini bertujuan memahami kualitas akuisisi dan seberapa besar proporsi pelanggan yang kembali berbelanja.
+## 📌 Executive Summary
+**Project Role:** Data Analyst  
+**Business Context:** Olist adalah platform E-Commerce terbesar di Brasil yang menghubungkan penjual kecil dengan pelanggan di seluruh negeri.  
+**Objective:** Mengidentifikasi inefisiensi logistik (pengiriman), peluang peningkatan pendapatan, dan segmentasi pelanggan menggunakan analisis data relasional.  
+**Result:** Mengungkap akar masalah keterlambatan pengiriman di negara bagian tertentu dan mengidentifikasi Top 20% kategori produk yang menyumbang mayoritas pendapatan (Pareto Principle).
 
-2. Seller & Product Performance
-Mengidentifikasi kategori produk yang dominan, kontribusi pendapatan, performa penjual, serta analisis ranking berdasarkan revenue. Area ini memberikan sudut pandang tentang penawaran yang paling menguntungkan bagi platform.
+---
 
-3. Operational & Logistics Performance
-Menganalisis waktu pengiriman, tingkat keterlambatan, serta distribusi pesanan berdasarkan kota atau wilayah. Fokus utama adalah mengukur efisiensi logistik dan potensi perbaikan dalam proses pemenuhan pesanan.
+## 🛠️ Tech Stack & Methodology
+* **SQL (PostgreSQL):** Pembersihan data, pemodelan data (*Data Modeling*), dan analisis bisnis kompleks menggunakan *CTEs, Window Functions,* dan *Multi-table Joins*.
+* **DBeaver:** Database management dan query execution.
+* **Tableau:** Visualisasi data interaktif dan dashboarding.
 
-4. Revenue & Financial Metrics
-Melakukan agregasi pendapatan bulanan, tren time-series, cumulative revenue, serta analisis pareto (top spending customers). Pendekatan ini memberikan gambaran pertumbuhan bisnis dan segmentasi pelanggan bernilai tinggi.
+---
 
-5. Cohort & Retention Analysis
-Menggunakan metode cohort untuk melihat pola retensi pelanggan dari bulan pertama pembelian hingga bulan-bulan berikutnya. Analisis ini sangat penting untuk mengukur keberhasilan strategi akuisisi dan pengalaman pelanggan secara jangka panjang.
+## 🔍 Key Analysis & Business Insights
+
+Berikut adalah sorotan analisis utama yang dilakukan untuk menjawab pertanyaan strategis bisnis.
+
+### 1. Evaluasi Performa Logistik Regional
+**Business Problem:** Negara kepulauan atau wilayah luas seringkali memiliki tantangan logistik. Manajemen ingin mengetahui wilayah mana yang memiliki performa pengiriman terburuk yang berpotensi meningkatkan *Churn Rate*.
+
+**SQL Approach:**
+Saya melakukan *3-Table Joins* (Orders, Items, Customers) dan membangun metrik kustom `late_delivery_rate` untuk mengukur persentase pesanan yang melanggar estimasi waktu kirim (SLA).
+
+```sql
+-- Cuplikan Logika Perhitungan Keterlambatan
+ROUND(
+    (SUM(CASE WHEN o.order_delivered_customer_date > o.order_estimated_delivery_date THEN 1 ELSE 0 END)::DECIMAL / 
+    COUNT(o.order_id)) * 100
+, 2) as late_delivery_rate
