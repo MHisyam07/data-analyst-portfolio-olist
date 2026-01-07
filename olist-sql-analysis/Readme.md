@@ -61,6 +61,26 @@ Kartu Kredit mendominasi 78,34% transaksi, diikuti oleh Boleto dengan 17,92%
 
 **Rekomendasi:** Fokuskan promo cicilan 0% dengan bank partner utama untuk meningkatkan Basket Size.
 
+### 3. Strategi Pertumbuhan: Analisis Pareto (80/20)
+**Business Problem:** Tim Marketing memiliki budget terbatas. Produk kategori apa yang harus diprioritaskan untuk kampanye iklan agar ROI maksimal?
+
+**SQL Approach:** Menerapkan Prinsip Pareto menggunakan RANK() dan Running Total untuk mengidentifikasi kategori produk "Sapi Perah" (Cash Cow).
+
+```sql
+-- Cuplikan Logika Ranking
+RANK() OVER(ORDER BY revenue DESC) as rank_position,
+SUM(revenue) OVER(ORDER BY revenue DESC ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW) as running_total
+```
+## Hasil Analisis:
+
+<img width="1311" height="308" alt="image" src="https://github.com/user-attachments/assets/cfb8cb1b-ba9f-4e8e-ae4d-0b686eb2d234" />
+
+**Insight:**
+Hasil diatas merupakan kategori teratas yang menyumbang mayoritas pendapatan perusahaan.
+
+**Rekomendasi:** 
+Alokasikan 80% budget marketing hanya untuk kategori-kategori ini untuk efisiensi biaya iklan.
+
 
 
 
