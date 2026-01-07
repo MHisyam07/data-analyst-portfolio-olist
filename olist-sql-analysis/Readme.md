@@ -72,7 +72,6 @@ RANK() OVER(ORDER BY revenue DESC) as rank_position,
 SUM(revenue) OVER(ORDER BY revenue DESC ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW) as running_total
 ```
 ## Hasil Analisis:
-
 <img width="1311" height="308" alt="image" src="https://github.com/user-attachments/assets/cfb8cb1b-ba9f-4e8e-ae4d-0b686eb2d234" />
 
 **Insight:**
@@ -81,7 +80,32 @@ Hasil diatas merupakan kategori teratas yang menyumbang mayoritas pendapatan per
 **Rekomendasi:** 
 Alokasikan 80% budget marketing hanya untuk kategori-kategori ini untuk efisiensi biaya iklan.
 
+### 4. Strategi Retensi Pelanggan (RFM Segmentation)
+**Business Problem:** Pendekatan pemasaran "satu pesan untuk semua" tidak efisien dan membuang budget. Tim Marketing perlu mengelompokkan pelanggan untuk memberikan perlakuan yang personal, seperti mencegah pelanggan VIP agar tidak pindah ke kompetitor (*Churn Prevention*).
 
+**SQL Approach:**
+Saya membangun model segmentasi **RFM (Recency, Frequency, Monetary)** menggunakan SQL.
+* **Teknik:** Menggunakan `MAX() OVER()` untuk menentukan "Tanggal Hari Ini" secara dinamis berdasarkan data terakhir di dataset, sehingga analisis tetap valid kapanpun dijalankan.
+* **Logika Bisnis:** Menggunakan `CASE WHEN` bertingkat untuk memberi label pelanggan (VIP, Active, Churned).
+
+```sql
+-- Cuplikan Logika Segmentasi (Business Rules)
+CASE 
+    WHEN recency_days <= 90 AND total_spent > 500 THEN 'VIP / Champion'
+    WHEN recency_days BETWEEN 91 AND 270 AND total_spent > 500 THEN 'Loyal - Need Attention'
+    WHEN recency_days > 270 THEN 'Churned / Inactive'
+    ELSE 'Others'
+END as customer_segment
+```
+## Hasil Analisis:
+<img width="1311" height="292" alt="image" src="https://github.com/user-attachments/assets/4150627e-8bae-43ce-ada5-b7e196945a1d" />
+
+**Insight:**
+Teridentifikasi segmen 'Loyal - Need Attention' (Pelanggan kaya yang sudah agak lama tidak belanja).
+
+**Rekomendasi:** 
+Segera kirimkan Voucher atau penawaran eksklusif kepada kelompok ini untuk mencegah mereka menjadi Churned.
+Untuk segmen 'VIP / Champion', berikan akses early-bird ke produk baru untuk menjaga loyalitas.
 
 
 
