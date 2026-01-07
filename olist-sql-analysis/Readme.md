@@ -37,6 +37,7 @@ ROUND(
 ```
 ## Hasil Analisis:
 <img width="1301" height="323" alt="image" src="https://github.com/user-attachments/assets/711ea941-e3d8-499e-80ad-0619161980a2" />
+
 **Actionable Insight:**
 Dengan mengurutkan berdasarkan tingkat keterlambatan tertinggi, Negara bagian "AL" memiliki tingkat keterlambatan tertinggi.
 
