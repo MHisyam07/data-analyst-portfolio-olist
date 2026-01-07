@@ -36,6 +36,12 @@ ROUND(
 , 2) as late_delivery_rate
 ```
 ## Hasil Analisis:
-<img width="1321" height="329" alt="image" src="https://github.com/user-attachments/assets/685c503d-b594-4fa6-b789-ea752ce7bdd7" />
+<img width="1301" height="323" alt="image" src="https://github.com/user-attachments/assets/711ea941-e3d8-499e-80ad-0619161980a2" />
+Actionable Insight:
+
+Dengan mengurutkan berdasarkan tingkat keterlambatan tertinggi, Negara bagian "AL" memiliki tingkat keterlambatan tertinggi.
+
+Rekomendasi: Perlu dilakukan audit vendor logistik di wilayah tersebut atau penyesuaian estimasi waktu kirim (ETA) di aplikasi agar ekspektasi pelanggan lebih realistis.
+
 
 
