@@ -34,3 +34,7 @@ ROUND(
     (SUM(CASE WHEN o.order_delivered_customer_date > o.order_estimated_delivery_date THEN 1 ELSE 0 END)::DECIMAL / 
     COUNT(o.order_id)) * 100
 , 2) as late_delivery_rate
+
+Hasil Analisis:
+<img width="1316" height="944" alt="image" src="https://github.com/user-attachments/assets/71ce1ef3-b360-42f2-a619-9f38b5ebfa32" />
+
