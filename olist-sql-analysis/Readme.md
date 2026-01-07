@@ -33,7 +33,7 @@ Saya melakukan *3-Table Joins* (Orders, Items, Customers) dan membangun metrik k
 ROUND(
     (SUM(CASE WHEN o.order_delivered_customer_date > o.order_estimated_delivery_date THEN 1 ELSE 0 END)::DECIMAL / 
     COUNT(o.order_id)) * 100
-, 2) as late_delivery_rate
+, 2) as late_delivery_rate```
 
 Hasil Analisis:
 <img width="1321" height="329" alt="image" src="https://github.com/user-attachments/assets/685c503d-b594-4fa6-b789-ea752ce7bdd7" />
