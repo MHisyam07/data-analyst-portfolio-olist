@@ -43,5 +43,39 @@ Dengan mengurutkan berdasarkan tingkat keterlambatan tertinggi, Negara bagian "A
 
 **Rekomendasi:** Perlu dilakukan audit vendor logistik di wilayah tersebut atau penyesuaian estimasi waktu kirim (ETA) di aplikasi agar ekspektasi pelanggan lebih realistis.
 
+### 2. Analisis Perilaku Pembayaran Pelanggan
+**Business Problem:** Tim Finance membutuhkan profil likuiditas pembayaran untuk menentukan strategi cash flow dan kemitraan bank.
+
+**SQL Approach:** Menggunakan Window Function SUM() OVER() untuk menghitung kontribusi persentase setiap metode pembayaran terhadap total revenue secara efisien.
+
+```sql
+-- Mengidentifikasi tipe pembayaran yang paling banyak digunakan dan kontribusinya terhadap revenue
+SUM(p.payment_value) as total_payment_value,
+    ROUND(SUM(p.payment_value) * 100.0 / SUM(SUM(p.payment_value)) OVER(), 2) as percentage_of_revenue
+```
+## Hasil Analisis:
+<img width="1312" height="248" alt="image" src="https://github.com/user-attachments/assets/30469890-9d68-44e2-8ef9-4a61f25728c3" />
+
+**Actionable Insight:**
+Kartu Kredit mendominasi 78,34% transaksi, diikuti oleh Boleto dengan 17,92%
+
+**Rekomendasi:** Fokuskan promo cicilan 0% dengan bank partner utama untuk meningkatkan Basket Size.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
