@@ -107,7 +107,12 @@ Teridentifikasi segmen 'Loyal - Need Attention' (Pelanggan kaya yang sudah agak 
 Segera kirimkan Voucher atau penawaran eksklusif kepada kelompok ini untuk mencegah mereka menjadi Churned.
 Untuk segmen 'VIP / Champion', berikan akses early-bird ke produk baru untuk menjaga loyalitas.
 
+## 📊 Tableau Dashboard
+Visualisasi interaktif dari analisis ini dapat diakses di sini:
 
+## 👉 [Link ke Tableau Public Anda Nanti]
+
+(Optional: Tempel satu screenshot besar Dashboard Tableau yang sudah jadi di sini)
 
 
 
