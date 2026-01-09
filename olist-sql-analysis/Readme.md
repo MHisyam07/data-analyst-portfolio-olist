@@ -109,8 +109,7 @@ Untuk segmen 'VIP / Champion', berikan akses early-bird ke produk baru untuk men
 
 ## 📊 Tableau Dashboard
 Visualisasi interaktif dari analisis ini dapat diakses di sini:
-
-## 👉 [Link ke Tableau Public Anda Nanti]
+## 👉 https://public.tableau.com/views/Dashboard_Portfolio_Olist/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/69c53195-b8eb-4926-ba39-8f4d316cfeaa" />
 
