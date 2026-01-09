@@ -112,7 +112,8 @@ Visualisasi interaktif dari analisis ini dapat diakses di sini:
 
 ## 👉 [Link ke Tableau Public Anda Nanti]
 
-(Optional: Tempel satu screenshot besar Dashboard Tableau yang sudah jadi di sini)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/69c53195-b8eb-4926-ba39-8f4d316cfeaa" />
+
 
 
 
