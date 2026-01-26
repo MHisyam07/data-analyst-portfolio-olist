@@ -1,8 +1,3 @@
--- ====================================================================
--- PROJECT: OLIST E-COMMERCE ANALYSIS
--- AUTHOR: [MOCHAMMAD HISYAM]
--- ====================================================================
-
 -- 1. DATA EXPLORATION (EDA)
 --    Memahami Rentang Data & Distribusi Status
 SELECT 
@@ -128,7 +123,8 @@ SELECT
         END as customer_segment
 FROM Segmentation
 ORDER BY total_spent DESC
-LIMIT 20; -- Sampel contoh
+LIMIT 20;
+
 
 
 
