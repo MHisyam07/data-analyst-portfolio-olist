@@ -108,10 +108,15 @@ Segera kirimkan Voucher atau penawaran eksklusif kepada kelompok ini untuk mence
 Untuk segmen 'VIP / Champion', berikan akses Eksklusif ke produk baru untuk menjaga loyalitas.
 
 ## 📊 Power BI Dashboard
-Visualisasi interaktif dari analisis ini dapat diakses di sini:
+Berikut adalah tampilan interaktif dashboard yang dibuat menggunakan Power BI.
+
+### 1. Executive Summary
 <img width="1473" height="824" alt="image" src="https://github.com/user-attachments/assets/8850e7f4-4671-4545-b387-ae2c1ee073ee" />
+
+### 2. Strategic & Operational View
 <img width="1452" height="822" alt="image" src="https://github.com/user-attachments/assets/43f54b34-a5c8-41ea-8373-1322d527c1fe" />
 
+[📥 Download File Power BI (.pbix) disini](data-analyst-portfolio-olist/olist-sql-analysis/olist_Analysis_Dashboard.pbix)
 
 
 
