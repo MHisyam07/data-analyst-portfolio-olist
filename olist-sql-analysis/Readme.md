@@ -128,7 +128,7 @@ Halaman ini digunakan oleh Manajer Pemasaran dan Logistik untuk mengidentifikasi
 
 <img width="1452" height="822" alt="image" src="https://github.com/user-attachments/assets/43f54b34-a5c8-41ea-8373-1322d527c1fe" />
 
-[📥 Download File Power BI (.pbix) disini](data-analyst-portfolio-olist/olist-sql-analysis/olist_Analysis_Dashboard.pbix)
+[📥 Download File Power BI (.pbix) disini](olist_Analysis_Dashboard.pbix)
 
 
 
