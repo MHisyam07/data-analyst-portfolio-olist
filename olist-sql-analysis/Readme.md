@@ -111,9 +111,21 @@ Untuk segmen 'VIP / Champion', berikan akses Eksklusif ke produk baru untuk menj
 Berikut adalah tampilan interaktif dashboard yang dibuat menggunakan Power BI.
 
 ### 1. Executive Summary
+Halaman ini dirancang untuk C-Level / Top Management guna memonitor kesehatan bisnis secara *real-time*.
+**Key Insights:**
+* **KPI Cards:** Menampilkan Total Revenue, Total Orders, dan % Late Delivery Rate sebagai metrik utama.
+* **Monthly Revenue Trend:** Grafik garis untuk melihat tren pertumbuhan dan musiman (seasonality) penjualan.
+* **Geospatial Analysis:** Peta persebaran pendapatan di seluruh negara bagian Brazil, difokuskan untuk melihat area dengan kontribusi terbesar.
+
 <img width="1473" height="824" alt="image" src="https://github.com/user-attachments/assets/8850e7f4-4671-4545-b387-ae2c1ee073ee" />
 
 ### 2. Strategic & Operational View
+Halaman ini digunakan oleh Manajer Pemasaran dan Logistik untuk mengidentifikasi masalah dan peluang spesifik.
+**Key Analysis:**
+* **Pareto Analysis (80/20 Rule):** Menggunakan DAX untuk mengidentifikasi **20% Kategori Produk** yang menyumbang **80% Total Pendapatan**. Ini membantu tim marketing memfokuskan budget iklan pada produk "Sapi Perah".
+* **RFM Segmentation (Treemap):** Visualisasi hasil segmentasi pelanggan (VIP, Active, Loyal, Churned) untuk strategi retensi yang lebih personal.
+* **Logistics Performance:** Grafik batang yang mengurutkan negara bagian berdasarkan tingkat keterlambatan tertinggi (State AL memiliki performa terburuk), sebagai sinyal untuk audit vendor logistik.
+
 <img width="1452" height="822" alt="image" src="https://github.com/user-attachments/assets/43f54b34-a5c8-41ea-8373-1322d527c1fe" />
 
 [📥 Download File Power BI (.pbix) disini](data-analyst-portfolio-olist/olist-sql-analysis/olist_Analysis_Dashboard.pbix)
