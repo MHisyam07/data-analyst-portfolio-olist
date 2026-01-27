@@ -14,7 +14,7 @@
 ## 🛠️ Tech Stack & Methodology
 * **SQL (PostgreSQL):** Pembersihan data, pemodelan data (*Data Modeling*), dan analisis bisnis kompleks menggunakan *CTEs, Window Functions,* dan *Multi-table Joins*.
 * **DBeaver:** Database management dan query execution.
-* **Tableau:** Visualisasi data interaktif dan dashboarding.
+* **Power BI:** Visualisasi data interaktif dan dashboarding.
 
 ---
 
@@ -105,11 +105,11 @@ Teridentifikasi segmen 'Loyal - Need Attention' (Pelanggan kaya yang sudah agak 
 
 **Rekomendasi:** 
 Segera kirimkan Voucher atau penawaran eksklusif kepada kelompok ini untuk mencegah mereka menjadi Churned.
-Untuk segmen 'VIP / Champion', berikan akses early-bird ke produk baru untuk menjaga loyalitas.
+Untuk segmen 'VIP / Champion', berikan akses Eksklusif ke produk baru untuk menjaga loyalitas.
 
-## 📊 Tableau Dashboard
+## 📊 Power BI Dashboard
 Visualisasi interaktif dari analisis ini dapat diakses di sini:
-## 👉 https://public.tableau.com/views/Dashboard_Portfolio_Olist/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link
+
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/69c53195-b8eb-4926-ba39-8f4d316cfeaa" />
 
