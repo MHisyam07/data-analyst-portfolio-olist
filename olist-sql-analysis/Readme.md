@@ -109,9 +109,10 @@ Untuk segmen 'VIP / Champion', berikan akses Eksklusif ke produk baru untuk menj
 
 ## 📊 Power BI Dashboard
 Visualisasi interaktif dari analisis ini dapat diakses di sini:
+<img width="1473" height="824" alt="image" src="https://github.com/user-attachments/assets/8850e7f4-4671-4545-b387-ae2c1ee073ee" />
+<img width="1452" height="822" alt="image" src="https://github.com/user-attachments/assets/43f54b34-a5c8-41ea-8373-1322d527c1fe" />
 
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/69c53195-b8eb-4926-ba39-8f4d316cfeaa" />
 
 
 
