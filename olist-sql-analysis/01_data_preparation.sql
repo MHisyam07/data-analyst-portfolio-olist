@@ -62,7 +62,7 @@ WHERE product_category_name IN ('portateis_cozinha_e_preparadores_de_alimentos',
 
 --  CREATING MASTER VIEW (TRANSFORMASI)
 -- View ini menggabungkan 5 tabel inti menjadi satu tabel denormalisasi (Wide Table)
--- Tujuannya Agar nantinya Tableau tidak perlu melakukan 5x JOIN yang berat.
+-- Tujuannya Agar nantinya Power BI tidak perlu melakukan 5x JOIN yang berat.
 
 CREATE VIEW olist_analytics_master AS
 SELECT 
@@ -100,5 +100,6 @@ JOIN olist_order_items_dataset oi ON o.order_id = oi.order_id
 LEFT JOIN olist_customers_dataset c ON o.customer_id = c.customer_id
 LEFT JOIN olist_products_dataset p ON oi.product_id = p.product_id
 LEFT JOIN product_category_name_translation t ON p.product_category_name = t.product_category_name;
+
 
 
